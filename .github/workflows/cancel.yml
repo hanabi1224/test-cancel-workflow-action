@@ -9,10 +9,10 @@ jobs:
   cancel:
     runs-on: ubuntu-latest
     steps:
-      - uses: hanabi1224/cancel-workflow-action@08c05258fe4338dfdf30dc84770b5a96b49a4627
+      - uses: hanabi1224/cancel-workflow-action@34ddb288197f83b5f9dda0ad8e5834454961a455
         with:
           workflow_id: ${{ github.event.workflow.id }}
           all_but_latest: true
-          branches-ignore: |
+          ignore_branches_on_push: |
             main
-            main2
+            master
