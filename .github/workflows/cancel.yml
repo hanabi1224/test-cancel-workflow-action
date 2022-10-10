@@ -1,0 +1,18 @@
+name: Cancel
+on:
+  workflow_run:
+    workflows:
+      - "main"
+    types:
+      - requested
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hanabi1224/cancel-workflow-action@08c05258fe4338dfdf30dc84770b5a96b49a4627
+        with:
+          workflow_id: ${{ github.event.workflow.id }}
+          all_but_latest: true
+          branches-ignore: |
+            main
+            main2
