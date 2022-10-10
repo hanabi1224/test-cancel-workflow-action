@@ -9,7 +9,7 @@ jobs:
   cancel:
     runs-on: ubuntu-latest
     steps:
-      - uses: hanabi1224/cancel-workflow-action@34ddb288197f83b5f9dda0ad8e5834454961a455
+      - uses: hanabi1224/cancel-workflow-action@120898519f2940069cc6a070c4f9c3d6cc2e7ff8
         with:
           workflow_id: ${{ github.event.workflow.id }}
           all_but_latest: true
